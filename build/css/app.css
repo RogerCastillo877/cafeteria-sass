@@ -453,7 +453,7 @@ ul {
 }
 
 h1, h2, h3 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0 0 5rem, 0;
   text-transform: uppercase;
   text-align: center;
@@ -497,4 +497,26 @@ h3 {
     margin-top: -10rem;
     position: relative;
   }
+}
+
+.icons {
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .icons .icons-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 5rem;
+       -moz-column-gap: 5rem;
+            column-gap: 5rem;
+  }
+}
+.icons .icons-list li img {
+  margin: 0 auto;
+  width: 12rem;
+}
+.icons .icons-list li p {
+  font-family: "Bona Nova", serif;
+  font-size: 3.2rem;
+  color: #5E311E;
 }
