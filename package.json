@@ -1,0 +1,19 @@
+{
+  "name": "cafeteria",
+  "version": "1.0.0",
+  "description": "Learning SASS, GULP, CSS grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RogerCastillo877/cafeteria-sass.git"
+  },
+  "author": "Roger Castillo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RogerCastillo877/cafeteria-sass/issues"
+  },
+  "homepage": "https://github.com/RogerCastillo877/cafeteria-sass#readme"
+}
