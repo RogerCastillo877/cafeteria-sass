@@ -1,5 +1,41 @@
-// @use 'variables' as v;
+@use 'bases/variables' as v;
+@use 'bases/mixins' as m;
 
-// .header {
-//   color: v.$black;
-// }
+.header {
+  padding: 5rem 0;
+  position: relative;
+  
+  @include m.tablet {
+    min-height: 70rem;
+  }
+  
+  &::before {
+    content: '';
+    background-color: v.$black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .6;
+  }
+
+  .header-content {
+    position: relative;
+    
+    h1 {
+      text-align: center;
+      color: v.$white;
+      text-transform: uppercase;
+      margin-top: 5rem;
+
+      @include m.tablet { 
+        margin-top: 10rem;
+      }
+    }
+  }
+}
+
+.header-init {
+  background-image: url(../../../build/img/header_inicio.jpg);
+}

@@ -1,3 +1,95 @@
+.header {
+  padding: 5rem 0;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .header {
+    min-height: 70rem;
+  }
+}
+.header::before {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+.header .header-content {
+  position: relative;
+}
+.header .header-content h1 {
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .header .header-content h1 {
+    margin-top: 10rem;
+  }
+}
+
+.header-init {
+  background-image: url(../../../build/img/header_inicio.jpg);
+}
+
+.nav-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .nav-main {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+}
+.nav-main a {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .nav-main a {
+    margin-bottom: 0;
+  }
+}
+.nav-main a:hover {
+  color: #C39C63;
+}
+.nav-main a.active {
+  color: #C39C63;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.navbar .logo {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .navbar .logo {
+    width: 20rem;
+    margin: 0;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -362,5 +454,5 @@ h3 {
 }
 
 .bg-primary {
-  background-color: #E8505B;
+  background-color: #5E311E;
 }
