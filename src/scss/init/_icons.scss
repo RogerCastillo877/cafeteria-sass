@@ -7,8 +7,8 @@
   .icons-list {
 
     @include m.tablet { 
-      @include grid(3, 2rem)
-    }
+      @include m.grid(3, 2rem);
+    };
     
     li {
       img {
