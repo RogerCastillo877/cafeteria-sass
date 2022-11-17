@@ -77,7 +77,8 @@ Adding file in other file that you need these styles
 ```
 @import 'header/header';
 and now you also can use
-@use 'header/header'
+@use 'header/header';   // Includes and use styles
+@forward ;              // Just includes files
 ```
 
 You can add whatchers to others files in __dev__ function
@@ -87,4 +88,58 @@ watch( 'src/scss/header/_header.scss', css )
 but you have to add all files one by one, or also you can use to follow all files:
 ```
 watch( 'src/scss/**/*.scss', css )
+```
+
+Create function to manage images
+```
+function images() {
+  return src('src/img/**/*')
+          .pipe( dest('build/img') ); 
+}
+```
+
+To get lighten up images install
+```
+npm i -D gulp-imagemin@7.1.0
+```
+Add pipe in image function
+```
+const imagemin = require('gulp-imagemin');
+
+function images() {
+  return src('src/img/**/*')
+          .pipe( imagemin({ optimizationLevel: 3 }) )   // To lighten up images
+          .pipe( dest('build/img') );
+}
+```
+
+To create images webp install
+```
+npm i --save-dev gulp-webp
+```
+Add function to conver images to webp format
+```
+const webp = require('gulp-webp');
+
+function webpVersion() {
+  return src('src/img/**/*.{png,jpg}')
+          .pipe( webp() )
+          .pipe( dest('build/img') )
+}
+```
+
+To create images webp install
+```
+npm i --save-dev gulp-avif
+```
+Add function to conver images to webp format
+```
+function avifVersion() {
+  const options = {
+    quality: 50
+  }
+  return src('src/img/**/*.{png,jpg}')
+          .pipe( avif( options ) )
+          .pipe( dest('build/img') )
+}
 ```
