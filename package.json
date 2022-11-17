@@ -15,5 +15,16 @@
   "bugs": {
     "url": "https://github.com/RogerCastillo877/cafeteria-sass/issues"
   },
-  "homepage": "https://github.com/RogerCastillo877/cafeteria-sass#readme"
+  "homepage": "https://github.com/RogerCastillo877/cafeteria-sass#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
 }
