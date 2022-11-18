@@ -143,3 +143,26 @@ function avifVersion() {
           .pipe( dest('build/img') )
 }
 ```
+
+To add sourcemap in the project
+```
+npm i --save-dev gulp-sourcemaps
+```
+add in function css
+```
+const sourcemaps = require('gulp-sourcemaps');
+function css( done ) {
+  src('src/scss/app.scss')                         // Identify file
+    .pipe( sourcemaps.init() )
+    .pipe( sass() )   // To compile (compressed | expanded)
+    .pipe( postcss([ autoprefixer ]) )
+    .pipe( sourcemaps.write('.') )
+    .pipe( dest('build/css') )                     // To save
+  done();
+};
+```
+
+To optimize css in the project
+```
+npm i --save-dev cssnano
+```

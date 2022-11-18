@@ -3,6 +3,8 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')( require('sass') );
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -10,8 +12,10 @@ const avif = require('gulp-avif');
 
 function css( done ) {
   src('src/scss/app.scss')                         // Identify file
+    .pipe( sourcemaps.init() )                     // Deprecated
     .pipe( sass() )   // To compile (compressed | expanded)
-    .pipe( postcss([ autoprefixer ]) )
+    .pipe( postcss([ autoprefixer, cssnano() ]) )
+    .pipe( sourcemaps.write('.') )
     .pipe( dest('build/css') )                     // To save
   done();
 };
