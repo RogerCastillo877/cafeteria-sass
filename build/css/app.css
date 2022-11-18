@@ -1,6 +1,8 @@
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -34,6 +36,10 @@
 
 .header-init {
   background-image: url(../../../build/img/header_inicio.jpg);
+}
+
+.header-us {
+  background-image: url(../../../build/img/header_nosotros.jpg);
 }
 
 .nav-main {
@@ -726,4 +732,32 @@ h3 {
   font-size: 2.4rem;
   color: #5E311E;
   font-family: "Bona Nova", serif;
+}
+
+@media (min-width: 768px) {
+  .content-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.content-us .image {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .content-us .image {
+    margin: 0 2rem 0 0;
+  }
+}
+.content-us .image img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 3rem solid #FFFFFF;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.content-us .text blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5E311E;
+  font-size: 2rem;
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería SASS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+  <header class="header header-us">
+    <div class="header-content container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="build/img/logo.svg" alt="Logo cafeteria">
+        </div>
+
+        <nav class="nav-main">
+          <a href="inicio.html">Inicio</a>
+          <a href="nosotros.html" class="active">Nosotros</a>
+          <a href="proceso.html">Proceso</a>
+          <a href="menu.html">Menu</a>
+          <a href="galeria.html">Galería</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+      <div class="header-text">
+        <h1>Una nueva experiencia cada día</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <h2><span>Conoce más</span> sobre nosotros</h2>
+    <div class="content-us">
+      <div class="image">
+        <picture>
+          <source
+            srcset="build/img/nosotros_sidebar.avif"
+            type="image/avif"
+          />
+          <source
+            srcset="build/img/nosotros_sidebar.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="build/img/nosotros_sidebar.jpg"
+            type="image/jpeg"
+          />
+          <img loading="lazy" decoding="async" src="./build/img/nosotros_sidebar.jpg" lazyalt="imagen de nosotros" width="500" height="300">
+        </picture>
+      </div>
+
+      <div class="text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reiciendis possimus culpa laborum labore pariatur nemo dolor maiores soluta perferendis? Facere impedit ipsa reprehenderit dolorem magnam libero cum quas omnis!</p>
+        <blockquote>¡Excelente Sabor!</blockquote>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reiciendis possimus culpa laborum labore pariatur nemo dolor maiores soluta perferendis? Facere impedit ipsa reprehenderit dolorem magnam libero cum quas omnis!</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content bg-white">
+      <div class="footer-box ubication">
+        <h3>Ubicación</h3>
+        <p>Nicólas Copérnico 5990</p>
+        <p>Quito, Ecuador</p>
+      </div>
+      <div class="footer-box booking">
+        <h3>Reservación</h3>
+        <p>Tel. 3850-9102</p>
+        <a href="tel:+3850-9102">Llamar</a>
+      </div>
+      <div class="footer-box schedule">
+        <h3>Horario</h3>
+        <p>Lun-Jue: 11:00 - 22:00</p>
+        <p>Vie-Sab: 09:00 - 24:00</p>
+        <p>Domingo: Cerrado</p>
+      </div>
+    </div>
+    <p class="copyright">Todos los derechos reservados. La Cafetería</p>
+  </footer>
+</body>
+</html>
