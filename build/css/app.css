@@ -466,26 +466,6 @@ ul {
   margin: 0;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.bg-primary {
-  background-color: #5E311E;
-}
-
-.bg-white {
-  background-color: #FFFFFF;
-}
-
-.margin-negative-10 {
-  margin-top: -10rem;
-}
-
-.padding-bottom-0 {
-  padding-bottom: 0;
-}
-
 h1, h2, .heading-white, h3 {
   font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
@@ -842,4 +822,68 @@ h3 {
 }
 .content-menu .text p {
   font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .content-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    background-image: url(../../../build/img/granos_cafe.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 40%;
+  }
+}
+
+.form .field {
+  margin-bottom: 2rem;
+}
+.form .field:last-of-type {
+  margin-bottom: 0;
+}
+.form .field label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.form .field input:not([type=submit]),
+.form .field select {
+  width: 100%;
+  padding: 1rem;
+  border: 0.5rem solid #5E311E;
+}
+.form .field input[type=submit] {
+  background-color: #5E311E;
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.form .field input[type=submit]:hover {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: #5E311E;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.margin-negative-10 {
+  margin-top: -10rem;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
