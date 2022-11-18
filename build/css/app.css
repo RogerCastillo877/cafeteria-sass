@@ -482,6 +482,10 @@ ul {
   margin-top: -10rem;
 }
 
+.padding-bottom-0 {
+  padding-bottom: 0;
+}
+
 h1, h2, .heading-white, h3 {
   font-family: "Raleway", sans-serif;
   margin: 0 0 5rem 0;
@@ -812,4 +816,30 @@ h3 {
   width: 50%;
   height: 5px;
   background-color: #C39C63;
+}
+
+.content-menu {
+  background-image: url(../../../build/img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3/6;
+}
+@media (min-width: 480px) {
+  .content-menu {
+    aspect-ratio: 3/4;
+  }
+}
+@media (min-width: 768px) {
+  .content-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/9;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+}
+.content-menu .text p {
+  font-size: 2rem;
 }

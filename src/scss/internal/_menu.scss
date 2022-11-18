@@ -1,2 +1,25 @@
 @use 'bases/variables' as v;
 @use 'bases/mixins' as m;
+
+.content-menu {
+  background-image: url(../../../build/img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%;
+  aspect-ratio: 3 / 6;
+
+  @include m.phone { 
+    aspect-ratio: 3 / 4;
+  }
+  @include m.tablet { 
+    @include m.grid(2, v.$separation);
+    aspect-ratio: 16 / 9;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+  .text {
+    p {
+      font-size: 2rem;
+    }
+  }
+}
