@@ -11,16 +11,16 @@
     min-height: 70rem;
   }
   
-  // &::before {
-  //   content: '';
-  //   background-color: v.$black;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   opacity: .6;
-  // }
+  &::before {
+    content: '';
+    background-color: v.$black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .6;
+  }
 
   .header-content {
     position: relative;
@@ -43,7 +43,7 @@
 }
 
 .header-us {
-  background-image: url(../../../build/img/header_nosotros.jpg);
+  background-image: url(./../../../build/img/header_nosotros.jpg);
 }
 
 .header-process {
