@@ -4,7 +4,7 @@
 .content-contact {
   @include m.tablet { 
     @include m.grid(2, v.$separation);
-    background-image: url(../../../build/img/granos_cafe.jpg);
+    background-image: url(../img/granos_cafe.jpg);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 40%;
